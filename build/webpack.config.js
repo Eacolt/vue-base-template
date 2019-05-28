@@ -1,0 +1,53 @@
+const path = require('path')
+const webpack =require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin  = require('vue-loader/lib/plugin')
+
+module.exports = {
+    entry:path.resolve(__dirname,'../src/main.js'),
+    output:{
+        path:path.resolve(__dirname,'../dist'),
+        filename:'js/[name].bundle.js'
+    },
+    module:{
+        rules:[
+            {
+                test:/\.vue$/,
+                use:[{
+                    loader:'vue-loader',
+                    options:{
+                        compilerOptions:{
+                            preserveWhitespace:false
+                        }
+                    }
+                }]
+            },
+            {
+                test:/\.(js|jsx)$/,
+                use:[{
+                    loader:'babel-loader'
+                }],
+                exclude:/node_modules/
+            },
+            {
+                test:/\.(jpe?g|png|gif|svg)$/,
+                use:[{
+                    loader:'file-loader',
+                    options:{
+                        outputPath:'img',
+                        name:'[name].[ext]'
+                    }
+                }]
+            }
+        ]
+    },
+    plugins:[
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            template:path.resolve(__dirname,'../public/index.html'),
+            
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ]
+}
