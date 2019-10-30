@@ -29,6 +29,7 @@
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",
     "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.2",
@@ -36,8 +37,12 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "core-js": "^3.2.1",
+    "axios": "^0.19.0",
+    "core-js": "^2.6.10",
+    "pixi-spine": "^1.5.19",
+    "pixi.js": "^4.8.8",
     "portfinder": "^1.0.23",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vuex": "^3.1.1"
   }
 }

@@ -13,7 +13,7 @@ module.exports = portfinder.getPortPromise().then((port)=>{
                     test:/\.(css|less)/,
                     use:[
                         {
-                            loader:'style-loader'
+                            loader:'vue-style-loader'
                         },
                         {
                             loader:'css-loader',
@@ -36,7 +36,7 @@ module.exports = portfinder.getPortPromise().then((port)=>{
             ]
         },
         devServer:{
-            host:'localhost',
+            host:'192.168.249.127',
             port:port,
             open:true,
             hot:true,
