@@ -36,7 +36,7 @@ module.exports = portfinder.getPortPromise().then((port)=>{
             ]
         },
         devServer:{
-            host:'192.168.249.127',
+            host:'localhost',
             port:port,
             open:true,
             hot:true,
