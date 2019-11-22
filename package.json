@@ -1,14 +1,14 @@
 {
-  "name": "name",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "description",
+  "description": "{{description}}",
   "main": "src/main.js",
   "scripts": {
     "serve": "webpack-dev-server --config build/dev.config.js",
     "build": "webpack --config build/prod.config.js"
   },
   "keywords": [],
-  "author": "author",
+  "author": "{{author}}",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -39,8 +39,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.10",
-    "pixi-spine": "^1.5.19",
-    "pixi.js": "^4.8.8",
+     
     "portfinder": "^1.0.23",
     "vue": "^2.6.10",
     "vuex": "^3.1.1"
